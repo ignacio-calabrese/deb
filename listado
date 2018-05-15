@@ -1,0 +1,13 @@
+#!/bin/bash
+
+dato=0
+
+for((a=0; a<=4; a++))
+{
+	read -p "posicion $a " dato[$a]
+}
+for((a=0; a<=4; a++))
+{
+	echo "en la posicion $a esta: " ${dato[$a]}
+}
+exit 0

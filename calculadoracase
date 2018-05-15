@@ -1,0 +1,68 @@
+#!/bin/bash
+
+NRO1=0
+NRO2=0
+OPERACION=""
+RES=0
+
+read -p "ingresar NRO1 " NRO1
+read -p "ingresar OPERACION(s,r,m,d) " OPERACION
+read -p "ingresar NRO2 " NRO2 
+
+case $OPERACION in
+	"s" | "S")
+     
+     RES=$(($NRO1 + $NRO2))
+     
+     ;;
+
+     "r" | "R")
+
+     RES=$(($NRO1 - $NRO2))
+
+     ;;
+
+     "m" | "M")
+
+     RES=$(($NRO1 * $NRO2))
+
+     ;;
+     
+     "d" | "D")
+     
+	     if (($NRO2 > $NRO1))
+        
+	then
+       
+	     echo "ERROR-Numero decimal"
+
+	     exit 1
+
+        fi 
+        
+	if (($NRO2 = 0))
+	
+	then
+	    echo "ERROR-No se puede dividir por o"
+    	
+	    exit 1
+
+        fi   
+
+     RES=$(($NRO1 / $NRO2))
+
+     ;;
+
+    
+ *) echo "OPERACION INVALIDA"
+	    
+	     exit 1
+     ;;	    
+esac
+
+echo "el resultado es: $RES"
+    
+exit 0
+      
+
+

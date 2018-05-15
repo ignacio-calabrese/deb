@@ -1,0 +1,10 @@
+#!/bin/bash
+
+arbol=""
+
+for((a=1; a<=20; a++))
+{
+	arbol=$arbol"x"
+	echo $arbol
+}	
+exit 0

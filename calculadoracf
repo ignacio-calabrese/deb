@@ -1,0 +1,68 @@
+#!/bin/bash
+. functions
+
+NRO1=0
+NRO2=0
+OPERACION=""
+RES=0
+
+read -p "ingresar NRO1 " NRO1
+read -p "ingresar OPERACION(s,r,m,d,p,e) " OPERACION
+read -p "ingresar NRO2 " NRO2
+
+case $OPERACION in
+	"s" | "S")
+		suma{}
+	;; 
+	 
+        "r" | "R")
+		resta{}
+	;;
+
+        "m" | "M")
+		multiplicar{}
+
+	;;
+
+        "d" | "D")
+		if (($NRO2  == 0))
+	        then
+	  
+	           echo "ERROR-No se puede dividir por o"
+             
+                   exit 1
+        
+	        fi
+
+                if (($NRO2 > $NRO1))
+	  
+	        then
+	 
+                   echo "ERROR-Numero decimal"
+        
+	           exit 1
+
+                fi
+        
+	        dividir{}
+	
+	;;
+	"p" | "P")
+		potencia{}
+	;;
+	"e" | "E")
+		sumatoria{}
+	;;	
+        *) 
+		echo "OPERACION INVALIDA"
+		exit 1
+
+	;;
+esac
+
+echo "Resultado es " $RES
+
+exit 0 
+
+
+

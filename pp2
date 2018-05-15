@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for((a=1; a<=5; a++))
+{
+	read -p "ingrese nombre: " nombre[$a]
+}
+for((a=5; a>=1; a--))
+{
+	echo "en la posicion $a esta : " ${nombre[$a]}	
+}
+exit 0

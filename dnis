@@ -1,0 +1,23 @@
+#!/bin/bash
+
+for((a=0; a<=4; a++))
+{
+	read -p "ingrese nombre " nombre[$a]
+	read -p "ingrese dni " dni[$a]
+}
+for((a=0; a<=4; a++))
+{
+	echo "${nombre[$a]} => ${dni[$a]}"
+}
+read -p "ingrese dni a buscar: " dnibuscado
+for((a=0; a<=2; a++))
+{
+	if(($dnibuscado == ${dni[$a]}))
+	then
+		echo "${nombre[$a]} => ${dni[$a]}"
+	fi	
+}
+exit 0
+
+
+

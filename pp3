@@ -1,0 +1,18 @@
+#!/bin/bash
+
+N1=0
+N2=0
+SUMAR="s"
+
+while [ $SUMAR = "s" ]
+do
+	read -p "ingresar N1: " N1
+	read -p "ingresar N2: " N2
+
+	echo $(($N1 + $N2))
+
+	read -p "realizar otra suma?(s/n) " SUMAR
+done
+exit 0
+
+

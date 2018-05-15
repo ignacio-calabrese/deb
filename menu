@@ -1,0 +1,37 @@
+#!/bin/bash
+
+OTRO="s"
+OPCION=""
+
+while [ $OTRO = "s" ]
+do
+	clear	
+	echo "1) Agregar persona"
+	echo "2) Buscar persona"
+	echo "3) Salir"
+
+	read -p "Seleccionar opcion: " OPCION
+	
+	if [ $OPCION = 3 ]
+	then
+		echo $OTRO = "n"
+	fi	
+	case $OPCION in
+		"1")
+			echo "Llamando a la funcion Agregar persona"
+		;;
+		
+		"2")
+			echo "Llamando a la funcion Buscar persona"
+		;;
+		
+		*)
+			echo "Gracias por usar nuestro sistema"
+			exit 1
+		;;
+	esac
+	sleep 3
+done
+exit 0
+		
+

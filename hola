@@ -1,0 +1,9 @@
+#!/bin/bash
+
+nombre=""
+
+read -p "ingrese nombre: " nombre
+echo "Hola $nombre"
+
+exit 0
+

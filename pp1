@@ -1,0 +1,18 @@
+#!/bin/bash
+
+NRO=0
+MAYOR=0
+
+read -p "ingrese numero: " MAYOR
+
+for((a=1; a<=2; a++))
+{
+	read -p "ingrese numero: " NRO
+
+	if((NRO > MAYOR))
+	then
+		MAYOR=$NRO
+	fi
+}
+echo "el mayor es: " $MAYOR
+exit 0

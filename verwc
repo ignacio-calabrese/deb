@@ -1,0 +1,31 @@
+#!/bin/bash
+
+a=0
+j=0
+pregunta="s"
+ver=0
+
+while [ $pregunta = "s" ]
+do
+	read -p "ingrese pico de vertice: " ver
+	
+	clear
+	
+	for((a=1; a<=$ver; a++))
+	{
+		arbol=$arbol"x"
+		echo $arbol
+	}
+	for((a=$ver-1; a>=1; a--))
+	{
+		arbol=""
+		for((j=1; j<=a; j++))
+		{
+			arbol=$arbol"x"
+		}
+		echo $arbol
+	}
+	read -p "continuar probando?(s/n) " pregunta
+done
+echo "gracias por probar"
+exit 0

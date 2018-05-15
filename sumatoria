@@ -1,0 +1,18 @@
+#!/bin/bash
+
+NRO=0
+SUMATORIA=0
+
+read -p "ingrese NRO: " NRO
+
+for((a=0; a<=$NRO; a++))
+{
+	SUMATORIA=$(($SUMATORIA + a))
+}
+echo "la sumatoria es: " $SUMATORIA
+
+exit 0
+
+		
+
+

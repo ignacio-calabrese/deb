@@ -1,0 +1,17 @@
+#!/bin/bash
+
+NRO=0
+EXPO=0
+POTENCIA=1
+
+read -p "ingrese NRO: " NRO
+read -p "ingrese EXPO: " EXPO
+
+for((a=1; a<=$EXPO; a++))
+{
+	POTENCIA=$(($POTENCIA * $NRO))
+}
+echo "la potencia de $NRO ^ $EXPO es: " $POTENCIA
+
+exit 0
+

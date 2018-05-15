@@ -1,0 +1,37 @@
+#!/bin/bash
+
+NRO1=0
+NRO2=0
+RESULTADO=0
+OPERACION=""
+
+read -p "ingresar NRO1 " NRO1
+read -p "ingresar OPERACION(s,r,m,d) " OPERACION
+read -p "ingresar NRO2 " NRO2
+
+if [ "$OPERACION" == "s" ]
+then
+	RESULTADO=$(($NRO1 + $NRO2))
+fi
+
+if [ "$OPERACION" == "r" ]
+then
+	RESULTADO=$(($NRO1 - $NRO2))
+fi
+
+if [ "$OPERACION" == "m" ]
+then
+	RESULTADO=$(($NRO1 * $NRO2))
+fi
+
+if [ "$OPERACION" == "d" ]
+then
+	RESULTADO=$(($NRO1 / $NRO2))
+fi
+
+echo "el resultado es: $RESULTADO"
+
+exit 0
+
+
+

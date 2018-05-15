@@ -1,0 +1,25 @@
+#!/bin/bash
+
+ver=0
+a==
+j=0
+arbol=""
+
+read -p "ingrese pico de vertice: " ver
+
+for((a=1; a<=$ver; a++))
+{
+	arbol=$arbol"x"
+	echo $arbol
+}
+for((a=$ver-1; a>=1; a--))
+{
+	arbol=""
+	for((j=1; j<=a; j++))
+	{
+		arbol=$arbol"x"
+	}
+	echo $arbol
+}
+exit 0
+

@@ -1,0 +1,27 @@
+function suma{}
+{
+	RES=$(($NRO1 + $NRO2))
+}
+function resta{}
+{
+	RES=$(($NRO1 - $NRO2))
+}
+function multiplicar{}
+{
+	RES=$(($NRO1 * $NRO2))
+}
+function dividir{}
+{
+	RES=$(($NRO1 / $NRO2))
+}
+function potencia{}
+{
+	RES=$(($NRO1 ** $NRO2))
+}
+function sumatoria{}
+{
+	for((a=0; a<=$NRO1; a++))
+	{
+		RES=$(($RES + a))
+	}
+}
